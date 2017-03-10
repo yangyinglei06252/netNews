@@ -29,9 +29,9 @@
         return [obj1.tid compare:obj2.tid];
     }];
     
-    for (MuLuNewsModel *mu in muluArr) {
-        NSLog(@"%@",mu);
-    }
+//    for (MuLuNewsModel *mu in muluArr) {
+//        NSLog(@"%@",mu);
+//    }
     return muluArr;
 }
 
