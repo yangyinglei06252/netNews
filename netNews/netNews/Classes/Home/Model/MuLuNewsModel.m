@@ -24,7 +24,7 @@
     NSArray *array = dic[@"tList"];
   
     NSArray *muluArr = [NSArray yy_modelArrayWithClass:[MuLuNewsModel class] json:array];
-    
+    //数组排序，根据数组里面的元素来排序，默认是升序
     muluArr = [muluArr sortedArrayUsingComparator:^NSComparisonResult(MuLuNewsModel *obj1, MuLuNewsModel *obj2) {
         return [obj1.tid compare:obj2.tid];
     }];

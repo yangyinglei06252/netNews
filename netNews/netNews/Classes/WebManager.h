@@ -15,8 +15,12 @@ typedef enum : NSUInteger {
 
 @interface WebManager : AFHTTPSessionManager
 
-+ (instancetype)shareManager;
+//+ (nullable instancetype)shareManager;
+//
+//- (void) requestWithRequestType:(RequsetType)requsetType WithUrlStr:(nullable NSString *)URLStr andParams:(nullable id)parameters  withSuccessBlock:(nullable void(^)(id  _Nullable responseObject))successBlock withFailureBlock:(nullable void(^)(NSError * _Nonnull error))failureBlock;
 
-- (void) requestWithRequestType:(RequsetType)requsetType WithUrlStr:(NSString *)URLStr andParams:(id)parameters  withSuccessBlock:(void(^)(id  _Nullable responseObject))successBlock withFailureBlock:(void(^)(NSError * _Nonnull error))failureBlock;
++ ( instancetype)shareManager;
+
+- (void) requestWithRequestType:(RequsetType)requsetType WithUrlStr:( NSString *)URLStr andParams:( id)parameters  withSuccessBlock:( void(^)(id   responseObject))successBlock withFailureBlock:( void(^)(NSError * error))failureBlock;
 
 @end

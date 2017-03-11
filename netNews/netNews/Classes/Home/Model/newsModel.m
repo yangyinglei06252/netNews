@@ -8,8 +8,14 @@
 
 #import "newsModel.h"
 #import <YYModel.h>
+#import "ImagesModel.h"
 
 @implementation newsModel
+
++(NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"imgextra":[ImagesModel class]};
+
+}
 
 + (void)requestNewsModelArrayWithUrlStr: (NSString *)urlStr andCompletionBlock: (void (^)(NSArray *modelArray))completionBlock{
 
@@ -21,12 +27,16 @@
         
         NSArray *modelArray = [NSArray yy_modelArrayWithClass:[newsModel class] json:dicArry];
         completionBlock(modelArray);
+        //默认是请求完数据是回到主线程
+//        NSLog(@"%@",[NSThread currentThread]);
         
     } withFailureBlock:^(NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
     }];
-
+        //这也是在主线程
+//        NSLog(@"%@",[NSThread currentThread]);
 
 }
+
 
 @end
