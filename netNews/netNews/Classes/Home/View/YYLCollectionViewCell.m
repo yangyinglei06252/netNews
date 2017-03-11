@@ -9,16 +9,24 @@
 #import "YYLCollectionViewCell.h"
 #import "NewsTableViewController.h"
 
-@implementation YYLCollectionViewCell
+@implementation YYLCollectionViewCell{
+
+    NewsTableViewController *newsVC;
+}
 
 -(void)awakeFromNib {
     [super awakeFromNib];
     
-//    self.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
-    NewsTableViewController *newsVC = [[NewsTableViewController alloc] init];
+    newsVC = [[NewsTableViewController alloc] init];
     newsVC.tableView.frame = self.contentView.bounds;
     [self.contentView addSubview:newsVC.tableView];
+
     
 }
 
+-(void)setUrlStr:(NSString *)urlStr {
+    _urlStr = urlStr;
+    newsVC.urlStr = urlStr;
+
+}
 @end

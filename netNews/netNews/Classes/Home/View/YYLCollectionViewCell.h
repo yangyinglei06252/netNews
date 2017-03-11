@@ -10,4 +10,6 @@
 
 @interface YYLCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, copy)NSString *urlStr;
+
 @end

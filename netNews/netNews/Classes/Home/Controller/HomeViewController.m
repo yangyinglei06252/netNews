@@ -81,7 +81,10 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     YYLCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
-
+    MuLuNewsModel *muluModel = _muluArray[indexPath.item];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/0-20.html",muluModel.tid];
+    cell.urlStr = urlStr;
+    
     return cell;
 }
 @end
