@@ -30,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labSource;
 @property (weak, nonatomic) IBOutlet UILabel *labReplyCount;
 @property (weak, nonatomic) IBOutlet UIImageView *imgsrcView;
-@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imagesArrView;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imagesViewArr;
 
 @end
 
@@ -38,7 +38,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    self.imgsrcView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imgsrcView.clipsToBounds = YES;
 }
 
 - (void)setNewsmodel:(newsModel *)newsmodel {
@@ -50,8 +52,12 @@
     _labSource.text = newsmodel.source;
     _labReplyCount.text = [NSString stringWithFormat:@"%zd",newsmodel.replyCount];
 
-    if (_imagesArrView.count == 2) {
+    for (int i = 0; i < self.imagesViewArr.count; i++) {
+        ImagesModel *imageModel = newsmodel.imgextra[i];
         
+        UIImageView *imageView = self.imagesViewArr[i];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageModel.imgsrc] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+        imageView.clipsToBounds = YES;
     }
     
 }

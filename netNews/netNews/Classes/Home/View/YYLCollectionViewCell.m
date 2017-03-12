@@ -8,6 +8,7 @@
 
 #import "YYLCollectionViewCell.h"
 #import "NewsTableViewController.h"
+#import "UILabel+CZAddition.h"
 
 @implementation YYLCollectionViewCell{
 
@@ -21,12 +22,14 @@
     newsVC.tableView.frame = self.contentView.bounds;
     [self.contentView addSubview:newsVC.tableView];
 
+    UILabel *refreshLabel = [UILabel cz_labelWithText:@"下拉刷新中..." fontSize:14 color:[UIColor lightGrayColor]];
+    [self.contentView insertSubview:refreshLabel atIndex:0];
     
+    refreshLabel.frame = CGRectMake(150, 0, 120, 40);
 }
 
 -(void)setUrlStr:(NSString *)urlStr {
     _urlStr = urlStr;
     newsVC.urlStr = urlStr;
-
 }
 @end

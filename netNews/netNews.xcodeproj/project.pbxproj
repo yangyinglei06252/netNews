@@ -26,6 +26,8 @@
 		66BCB5071E74284400FCA642 /* BigCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BCB5061E74284400FCA642 /* BigCell.xib */; };
 		66BCB5091E742D1400FCA642 /* ImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BCB5081E742D1400FCA642 /* ImagesCell.xib */; };
 		66BCB50C1E74325100FCA642 /* ImagesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BCB50B1E74325100FCA642 /* ImagesModel.m */; };
+		66BCB50F1E751A8900FCA642 /* MuluLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BCB50E1E751A8900FCA642 /* MuluLable.m */; };
+		66BCB5121E753E6700FCA642 /* UILabel+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BCB5111E753E6700FCA642 /* UILabel+CZAddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		66BCB5081E742D1400FCA642 /* ImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesCell.xib; sourceTree = "<group>"; };
 		66BCB50A1E74325100FCA642 /* ImagesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesModel.h; sourceTree = "<group>"; };
 		66BCB50B1E74325100FCA642 /* ImagesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesModel.m; sourceTree = "<group>"; };
+		66BCB50D1E751A8900FCA642 /* MuluLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuluLable.h; sourceTree = "<group>"; };
+		66BCB50E1E751A8900FCA642 /* MuluLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuluLable.m; sourceTree = "<group>"; };
+		66BCB5101E753E6700FCA642 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		66BCB5111E753E6700FCA642 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
 		B7C63C3639958E6D45B57FFF /* libPods-netNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-netNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0BA9100F6F8C1B26F02FCD /* Pods-netNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-netNews/Pods-netNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +170,8 @@
 		66BCB4E51E72BF8300FCA642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				66BCB50D1E751A8900FCA642 /* MuluLable.h */,
+				66BCB50E1E751A8900FCA642 /* MuluLable.m */,
 				66BCB4F01E72D5B100FCA642 /* YYLCollectionViewCell.h */,
 				66BCB4F11E72D5B100FCA642 /* YYLCollectionViewCell.m */,
 				66BCB4FF1E741D9200FCA642 /* NewsTableViewCell.h */,
@@ -178,6 +186,8 @@
 		66BCB4F61E72DE7800FCA642 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				66BCB5101E753E6700FCA642 /* UILabel+CZAddition.h */,
+				66BCB5111E753E6700FCA642 /* UILabel+CZAddition.m */,
 				66BCB4F71E72DEC000FCA642 /* WebManager.h */,
 				66BCB4F81E72DEC000FCA642 /* WebManager.m */,
 			);
@@ -329,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BCB50F1E751A8900FCA642 /* MuluLable.m in Sources */,
 				66BCB4F51E72DB0C00FCA642 /* NewsTableViewController.m in Sources */,
 				66BCB4CF1E72BD0C00FCA642 /* AppDelegate.m in Sources */,
 				66BCB4CC1E72BD0C00FCA642 /* main.m in Sources */,
@@ -337,6 +348,7 @@
 				66BCB5011E741D9200FCA642 /* NewsTableViewCell.m in Sources */,
 				66BCB4F91E72DEC000FCA642 /* WebManager.m in Sources */,
 				66BCB4EF1E72C61C00FCA642 /* MuLuNewsModel.m in Sources */,
+				66BCB5121E753E6700FCA642 /* UILabel+CZAddition.m in Sources */,
 				66BCB4F21E72D5B100FCA642 /* YYLCollectionViewCell.m in Sources */,
 				66BCB50C1E74325100FCA642 /* ImagesModel.m in Sources */,
 			);

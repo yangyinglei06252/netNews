@@ -17,6 +17,7 @@
 
 }
 
+
 + (void)requestNewsModelArrayWithUrlStr: (NSString *)urlStr andCompletionBlock: (void (^)(NSArray *modelArray))completionBlock{
 
     [[WebManager shareManager] requestWithRequestType:GET WithUrlStr:urlStr andParams:nil withSuccessBlock:^(id  _Nullable responseObject) {
